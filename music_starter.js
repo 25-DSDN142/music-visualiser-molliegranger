@@ -42,40 +42,18 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    let bar_pos_x = width / 2;
  
 // changes 
-   // vocal bar is red
-   strokeWeight(0);
-   fill(255);
-   rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-   fill(127, 80, 191);
-   text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
- 
-   // drum bar is green
-   fill(255);
-   rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-   fill(127, 80, 191);
-   text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
- 
-   // bass bar is blue
-   fill(255);
-   rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-   fill(127, 80, 191);
-   text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
- 
-   // other bar is white
-   fill(255);
-   rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-   fill(127, 80, 191);
-   text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
-   fill(127, 80, 191);
- 
+
    // display "words"
    textAlign(CENTER);
    textSize(vocal);
    text(words, width/2, height/3);
    if (oliviaImg && mirrorImg){
    let bob = map (drum, 0,100, -10,10);
-   image (oliviaImg, width/2 - 100, height/2 - 150 + bob, 200, 300);
-   image (mirrorImg, width/2 - 120, height/2 - 180 + bob, 240, 360);
+
+   image (oliviaImg, 190, 198 + bob, 140, 140);
+   image (mirrorImg, 120, 180 + bob, 300, 300);
 
    }
+ noStroke();
+ ellipse(265, 270, 100, 150);
 }
