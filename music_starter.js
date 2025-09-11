@@ -5,14 +5,19 @@ let myImage;
 let firstRun = true;
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
    if (firstRun) {
-  myImage = loadImage("lace-border.png"); // make sure filename matches exactly
+  myImage = loadImage("lace-border.png");
   firstRun = false;
 }
   background(236, 222, 255)
   if (myImage) {
   image(myImage, 0, 30, width, 40); 
-}
 
+  push ();
+  translate (0, height);
+  scale(1,-1);
+  image(myImage, 0, 30, width, 40); 
+  pop ();
+  }
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
   textSize(24);
