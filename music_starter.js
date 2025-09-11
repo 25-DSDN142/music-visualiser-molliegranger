@@ -3,19 +3,24 @@
 
 let myImage;
 let firstRun = true;
+
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
    if (firstRun) {
   myImage = loadImage("lace-border.png");
   firstRun = false;
 }
   background(236, 222, 255)
+  //top lace
   if (myImage) {
-  image(myImage, 0, 30, width, 40); 
-
+   let offset = map (counter,0,100, -50, 50);
+  
+   image(myImage, offset, 30, width, 40); 
+ 
+   //bottom lace
   push ();
   translate (0, height);
   scale(1,-1);
-  image(myImage, 0, 30, width, 40); 
+  image(myImage, -offset, 30, width, 40); 
   pop ();
   }
   textFont('Verdana'); // please use CSS safe fonts
