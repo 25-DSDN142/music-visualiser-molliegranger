@@ -769,14 +769,6 @@ pastry
 
 
 
-
-
-
-
-
-
-
-
 Aren't
 Aren't
 Aren't
@@ -796,8 +788,14 @@ Aren't
 Aren't
 Aren't
 Aren't
-
-
+Aren't
+Aren't
+Aren't
+Aren't
+Aren't
+Aren't
+Aren't
+Aren't
 
 you
 you
@@ -1334,13 +1332,13 @@ Lacy,
 
 
 
-
-
-
-
-
-
-
+eyes
+eyes
+eyes
+eyes
+eyes
+eyes
+eyes
 eyes
 eyes
 eyes
@@ -1484,10 +1482,10 @@ daisies
 daisies
 daisies
 daisies
-
-
-
-
+daisies
+daisies
+daisies
+daisies
 
 
 
@@ -2011,6 +2009,19 @@ well?
 
 
 
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
+ooh
 
 
 
@@ -2023,16 +2034,41 @@ well?
 
 
 
+i
+i
+i
+i
+i
+i
+i
 
 
 
 
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
 
 
 
 
 
 
+i
+i
+i
+i
+i
+i
+i
 
 
 
@@ -2040,12 +2076,28 @@ well?
 
 
 
+care
+care
+care
+care
+care
+care
+care
+care
+care
 
 
 
 
 
 
+i
+i
+i
+i
+i
+i
+i
 
 
 
@@ -2053,74 +2105,20 @@ well?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
+care
 
 
 
@@ -3074,21 +3072,21 @@ see
 
 
 
+you 
+you
+you
+you
+you
+you
+you
+you
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+everywhere
+everywhere
+everywhere
+everywhere
+everywhere
+everywhere
 
 
 
