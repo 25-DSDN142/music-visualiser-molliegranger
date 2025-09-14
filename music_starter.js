@@ -8,7 +8,12 @@ let tapeCopyImg;
 let paperImg;
 let cherubImg;
 let lacecornerImg;
-let starsImg;
+let starsBackgroundImg;
+let bowImg;
+let bowcopyImg;
+let star1Img;
+let star2Img;
+let star3Img;
 
 let firstRun = true;
 let laceX = 0;
@@ -27,7 +32,14 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   paperImg = loadImage("Papertexture.png");
   cherubImg = loadImage("cherub.png");
   lacecornerImg = loadImage("lacecorner.png")
-  starsImg = loadImage("stars.png")
+  starsBackgroundImg = loadImage("starsbackground.png")
+  bowImg = loadImage("bow.png")
+  bowcopyImg = loadImage("bowcopy.png")
+  star1Img = loadImage("star1.png")
+  star2Img = loadImage("star2.png")
+  star3Img = loadImage("star3.png")
+
+
   firstRun = false;
 }
   background(236, 222, 255)
@@ -38,8 +50,8 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   noTint(); 
 }
  
-if (starsImg) {
-image(starsImg, 0, 0, width, height); 
+if (starsBackgroundImg) {
+image(starsBackgroundImg, 0, 0, width, height); 
 }
 
 noStroke()
@@ -64,9 +76,9 @@ if (lacecornerImg) {
  dropY2 = dropY2 + drum / 5.6;
  dropY3 = dropY3 + drum / 5.3;
 
- if (dropY > 895) dropY = 0;
- if (dropY2 > 895) dropY2 = 0;
- if (dropY3 > 895) dropY3 = 0;
+ if (dropY > 885) dropY = 0;
+ if (dropY2 > 885) dropY2 = 0;
+ if (dropY3 > 885) dropY3 = 0;
 
 //tears puddle
 ellipse(60, 895, 80, 50);
@@ -133,4 +145,18 @@ if (cherubImg) {
    let bob = map(drum, 0, 100, -10, 10);
   image(cherubImg, 210, 650 + bob, 150, 150); 
 }
+
+if (bowImg && bowcopyImg) {
+   let bob = map(drum, 0, 100, -10, 10);
+  image(bowImg, 460, 330 + bob, 80, 80); 
+  image(bowcopyImg, 410, 390 + bob, 80, 80); 
+}
+
+if (star1Img && star2Img && star3Img) {
+   let bob = map(drum, 0, 100, -10, 10);
+  image(star1Img, 170, 725 + bob, 50, 50); 
+  image(star2Img, 115, 745 + bob, 50, 50); 
+  image(star3Img, 90, 790 + bob, 45, 45); 
+}
+
 }
