@@ -42,24 +42,28 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
   firstRun = false;
 }
+//background
   background(236, 222, 255)
-  
+
+  //paper texture
   if (paperImg) {
   tint(255, 50); 
   image(paperImg, 0, 0, width, height); 
   noTint(); 
-}
+  }
  
-if (starsBackgroundImg) {
-image(starsBackgroundImg, 0, 0, width, height); 
-}
+ //stars in background
+ if (starsBackgroundImg) {
+ image(starsBackgroundImg, 0, 0, width, height); 
+ }
+
+ //lace corner
+ if (lacecornerImg) {
+ image(lacecornerImg, 0,0, 540, 960);
+ }
 
 noStroke()
-
-if (lacecornerImg) {
-  image(lacecornerImg, 0,0, 540, 960);
-}
-
+ 
 // tears
   fill(160, 80,200);
   
@@ -81,13 +85,14 @@ if (lacecornerImg) {
  if (dropY3 > 885) dropY3 = 0;
 
 //tears puddle
-ellipse(60, 895, 80, 50);
-ellipse(30, 890, 40, 25);
-ellipse(90, 890, 40, 25);
-ellipse(50, 875, 35, 20);
-ellipse(70, 875, 35, 20);
-ellipse(30, 905, 35, 15);
-ellipse(90, 905, 35, 15);
+ ellipse(60, 895, 80, 50);
+ ellipse(30, 890, 40, 25);
+ ellipse(90, 890, 40, 25);
+ ellipse(50, 875, 35, 20);
+ ellipse(70, 875, 35, 20);
+ ellipse(30, 905, 35, 15);
+ ellipse(90, 905, 35, 15);
+
 //top lace
   if (laceImg) {
    laceX = (laceX + 2) % width;
@@ -96,7 +101,7 @@ ellipse(90, 905, 35, 15);
   image(laceImg, laceX, 0, width, 40); 
   image(laceImg, laceX - width, 0, width, 40);
 
-   //bottom lace
+//bottom lace
   push ();
   translate (0, height);
   scale(1,-1);
@@ -104,6 +109,7 @@ ellipse(90, 905, 35, 15);
   image(laceImg, bottomlaceX - width, 0, width, 40);
   pop ();
   }
+   
 //text
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
@@ -113,7 +119,7 @@ ellipse(90, 905, 35, 15);
    let bar_height = width / 12;
    let bar_pos_x = width / 2;
 
-// changes 
+// sticky note
   fill(186, 162, 219)
   quad(95, 205, 445, 205, 445, 395, 95, 395);
   stroke (150,120,200);
@@ -123,35 +129,38 @@ ellipse(90, 905, 35, 15);
   line(95, 320, 445, 320);
   line(95, 345, 445, 345);
   line(95, 375, 445, 375);
-
+//tapes on sticky note
   if (tapeImg && tapeCopyImg){
    image (tapeImg, 70, 170, 100, 100);
    image (tapeCopyImg, 370, 175, 100, 100);
   }
 
-// display "words"
+// lyrics
   fill(127, 80, 191)
    textAlign(CENTER);
    textSize(vocal);
    text(words, width/2, height/3);
   
-   
+//mirror
  if (oliviamirrorImg){
   let bob = map(drum, 0, 100, -10, 10);
   image(oliviamirrorImg, 240, 470 + bob, 300, 300); 
-}
+ }
 
+//angel
 if (cherubImg) {
    let bob = map(drum, 0, 100, -10, 10);
   image(cherubImg, 210, 650 + bob, 150, 150); 
-}
+ }
 
-if (bowImg && bowcopyImg) {
+//bows
+ if (bowImg && bowcopyImg) {
    let bob = map(drum, 0, 100, -10, 10);
   image(bowImg, 460, 330 + bob, 80, 80); 
   image(bowcopyImg, 410, 390 + bob, 80, 80); 
-}
+ }
 
+//stars
 if (star1Img && star2Img && star3Img) {
    let bob = map(drum, 0, 100, -10, 10);
   image(star1Img, 170, 725 + bob, 50, 50); 
